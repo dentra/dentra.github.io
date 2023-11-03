@@ -259,7 +259,7 @@ mqtt:
       name: "Bedroom Air Monitor Version"
       state_topic: *bedroom_air_monitor_topic
       device: *bedroom_air_monitor_device
-      value_template: "{{ value_json.version if value_json.type == "12" }}"
+      value_template: "\{{ value_json.version if value_json.type == "12" }}"
       entity_category: diagnostic
       enabled_by_default: false
 ```
