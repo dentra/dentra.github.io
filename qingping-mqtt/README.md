@@ -181,7 +181,9 @@ mqtt:
       device_class: carbon_dioxide
       state_class: measurement
       unit_of_measurement: "ppm"
-      value_template: "{{ value_json.sensorData.0.co2.value if value_json.type == "12" and value_json.sensorData.0.temperature.status == 0 }}"
+      value_template: >-
+        {{ value_json.sensorData.0.co2.value 
+          if value_json.type == "12" and value_json.sensorData.0.temperature.status == 0 }}
 
     - unique_id: bedroom_air_monitor_temperature
       object_id: bedroom_air_monitor_temperature
@@ -191,7 +193,9 @@ mqtt:
       device_class: temperature
       state_class: measurement
       unit_of_measurement: "°C"
-      value_template: "{{ value_json.sensorData.0.temperature.value | round(1) if value_json.type == "12" and value_json.sensorData.0.temperature.status == 0 }}"
+      value_template: >-
+        {{ value_json.sensorData.0.temperature.value | round(1) 
+          if value_json.type == "12" and value_json.sensorData.0.temperature.status == 0 }}
       # suggested_display_precision: 1
 
     - unique_id: bedroom_air_monitor_humidity
@@ -202,7 +206,9 @@ mqtt:
       device_class: humidity
       state_class: measurement
       unit_of_measurement: "%"
-      value_template: "{{ value_json.sensorData.0.humidity.value | round(1) if value_json.type == "12" and value_json.sensorData.0.humidity.status == 0 }}"
+      value_template: >-
+        {{ value_json.sensorData.0.humidity.value | round(1)
+          if value_json.type == "12" and value_json.sensorData.0.humidity.status == 0 }}
       # suggested_display_precision: 1
 
     - unique_id: bedroom_air_monitor_tvoc
@@ -218,8 +224,10 @@ mqtt:
       # unit_of_measurement above and apply to value_template below.
       # value_template: >-
       #   {{ (value_json.sensorData.0.tvoc.value * 12.187 * 110 / (273.15 + value_json.sensorData.0.temperature.value) / 1000) | round(3)
-      #       if value_json.type == "12" and value_json.sensorData.0.tvoc.status == 0 }}
-      value_template: "{{ value_json.sensorData.0.tvoc.value if value_json.type == "12" and value_json.sensorData.0.tvoc.status == 0 }}"
+      #     if value_json.type == "12" and value_json.sensorData.0.tvoc.status == 0 }}
+      value_template: >-
+        {{ value_json.sensorData.0.tvoc.value 
+          if value_json.type == "12" and value_json.sensorData.0.tvoc.status == 0 }}"
 
     - unique_id: bedroom_air_monitor_pm25
       object_id: bedroom_air_monitor_pm25
@@ -229,7 +237,9 @@ mqtt:
       device_class: pm25
       state_class: measurement
       unit_of_measurement: "µg/m³"
-      value_template: "{{ value_json.sensorData.0.pm25.value if value_json.type == "12" and value_json.sensorData.0.pm25.status == 0 }}"
+      value_template: >-
+        {{ value_json.sensorData.0.pm25.value 
+          if value_json.type == "12" and value_json.sensorData.0.pm25.status == 0 }}
 
     - unique_id: bedroom_air_monitor_pm10
       object_id: bedroom_air_monitor_pm10
@@ -239,7 +249,9 @@ mqtt:
       device_class: pm10
       state_class: measurement
       unit_of_measurement: "µg/m³"
-      value_template: "{{ value_json.sensorData.0.pm10.value if value_json.type == "12" and value_json.sensorData.0.pm25.status == 0 }}"
+      value_template: >-
+        {{ value_json.sensorData.0.pm10.value 
+          if value_json.type == "12" and value_json.sensorData.0.pm25.status == 0 }}
 
     - unique_id: bedroom_air_monitor_battery
       object_id: bedroom_air_monitor_battery
@@ -250,7 +262,9 @@ mqtt:
       state_class: measurement
       unit_of_measurement: "%"
       # do not additionally check status here
-      value_template: "{{ value_json.sensorData.0.battery.value if value_json.type == "12" }}"
+      value_template: >-
+        {{ value_json.sensorData.0.battery.value 
+          if value_json.type == "12" }}
       entity_category: diagnostic
 
     # as we can't use jinja2 in device.sw_version,
@@ -261,7 +275,9 @@ mqtt:
       name: "Bedroom Air Monitor Version"
       state_topic: *bedroom_air_monitor_topic
       device: *bedroom_air_monitor_device
-      value_template: "{{ value_json.version if value_json.type == "12" }}"
+      value_template: >-
+        {{ value_json.version 
+          if value_json.type == "12" }}
       entity_category: diagnostic
       enabled_by_default: false
 ```
