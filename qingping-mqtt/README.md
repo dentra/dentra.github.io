@@ -4,7 +4,7 @@
 [![Support author][donate-boosty-shield]][donate-boosty]
 
 [telegram-chat-shield]: https://img.shields.io/static/v1?label=Обсуждение&message=Телеграм&logo=telegram&color=blue
-[telegram-chat]: https://t.me/dentra_chat
+[telegram-chat]: https://t.me/dentra_chat/3
 
 [telegram-blog-shield]: https://img.shields.io/static/v1?label=Обновления+и+новости&message=Телеграм&logo=telegram&color=blue
 [telegram-blog]: https://t.me/dentra_blog
@@ -16,6 +16,8 @@
 [donate-boosty]: https://boosty.to/dentra
 
 # Локальный MQTT-доступ для устройств Qingping.
+
+English version of this page is easily available via [google translate](https://dentra-github-io.translate.goog/qingping-mqtt/?_x_tr_sl=ru&_x_tr_tl=en&_x_tr_hl=ru&_x_tr_pto=wapp)
 
 В статье будет рассмотрен монитор качества воздуха `Qingping Air Monitor` (`CGS1`/`cgllc.airmonitor.s1`). 
 Порядок действий для `Qingping Air Monitor Lite` (`CGDN1`/`cgllc.airm.cgdn1`) будет похожим. 
@@ -312,7 +314,7 @@ mode: single
 
 ## Обсуждение/помощь/доработка
 
-Обсудить и получить помощь можно в моем [чате в Telegram](https://t.me/dentra_chat)
+Обсудить и получить помощь можно в моем [чате в Telegram](https://t.me/dentra_chat/3)
 
 Следить за моими проектами можно на моем [канале в Telegram](https://t.me/dentra_blog) или [ленте на Boosty](https://boosty.to/dentra).
 
