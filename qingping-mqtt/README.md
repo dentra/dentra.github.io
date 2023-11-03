@@ -80,6 +80,7 @@ English version of this page is easily available via [google translate](https://
   - 12: данные реального времени
   - 17: исторические данные 
 * Нас интерсуют данные 12 типа, вот их пример:
+
 ```json
 {
     // mac-адрес устройства
@@ -161,6 +162,7 @@ English version of this page is easily available via [google translate](https://
 - Поиск: "bedroom_air_monitor", замена: "желаемое название вашего устройства", например: "air_quality", **ВАЖНО** испольовать только латинские мальнькие буквы, цифры и подчеркивание. 
 
 
+<!-- {% raw %} --> 
 ```yaml
 mqtt:
   sensor:
@@ -259,10 +261,11 @@ mqtt:
       name: "Bedroom Air Monitor Version"
       state_topic: *bedroom_air_monitor_topic
       device: *bedroom_air_monitor_device
-      value_template: "\{{ value_json.version if value_json.type == "12" }}"
+      value_template: "{{ value_json.version if value_json.type == "12" }}"
       entity_category: diagnostic
       enabled_by_default: false
 ```
+<!-- {% endraw %} --> 
 
 ### Настройка интервала обновления
 
@@ -270,6 +273,7 @@ mqtt:
 
 Как минимум замените mac-адрес в топике на свой в верхнем регистре. Так же можно изменить интервал обновления.
 
+<!-- {% raw %} --> 
 ```yaml
 alias: Bedroom Air Monitor MQTT update interval
 description: "Instruct Qingping Air Monitor to do updates more quickly"
@@ -288,6 +292,7 @@ action:
       topic: qingping/582D3400BD48/down
 mode: single
 ```
+<!-- {% endraw %} --> 
 
 ## Открытые вопросы
 
