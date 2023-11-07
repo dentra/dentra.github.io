@@ -227,7 +227,7 @@ mqtt:
       #     if value_json.type == "12" and value_json.sensorData.0.tvoc.status == 0 }}
       value_template: >-
         {{ value_json.sensorData.0.tvoc.value 
-          if value_json.type == "12" and value_json.sensorData.0.tvoc.status == 0 }}"
+          if value_json.type == "12" and value_json.sensorData.0.tvoc.status == 0 }}
 
     - unique_id: bedroom_air_monitor_pm25
       object_id: bedroom_air_monitor_pm25
