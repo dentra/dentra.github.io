@@ -1,3 +1,10 @@
+---
+layout: post
+title: "Локальный MQTT-доступ для устройств Qingping"
+date: 2023-11-03 20:26:00 +0300
+categories: homeassistant qingping mqtt
+---
+
 [![Telegram Chat][telegram-chat-shield]][telegram-chat]
 [![Telegram Blog][telegram-blog-shield]][telegram-blog]
 [![Support author][donate-tinkoff-shield]][donate-tinkoff]

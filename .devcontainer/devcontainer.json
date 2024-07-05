@@ -1,0 +1,4 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/jekyll",
+    "postCreateCommand": ".devcontainer/post-create.sh"
+}
