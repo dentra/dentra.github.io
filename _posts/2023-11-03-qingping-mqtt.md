@@ -143,7 +143,7 @@ English version of this page is easily available via [google translate](https://
 Данные мы дождались, но снимать измерения раз в 15 минут как-то совсем грустно, поэтому обратимся к документации 
 [3.12 Server Send Setting For Temporary Report And Duration Time](https://developer.qingping.co/main/private/public_mqtt#312-server-send-setting-for-temporary-report-and-duration-time)
 
-```json
+```jsonc
 {
     // тип данных пакета
     "type" : "12",
