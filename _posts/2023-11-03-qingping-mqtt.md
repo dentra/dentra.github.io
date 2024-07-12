@@ -45,7 +45,7 @@ English version of this page is easily available via [google translate](https://
   - В прилодении "Qingping IoT", добавить новое устройство и вводим код
 
 ## Включение MQTT
-* Переходим на https://developer.qingping.co/ используя данные указанные при регистрации в приложении "Qingping IoT". 
+* Переходим на [developer.qingping.co](https://developer.qingping.co/) используя данные указанные при регистрации в приложении "Qingping IoT". 
 (**Важно**: для доступа используйте ПК или планшет т.к. сайт не оптимизирован для мобильных устройств)
 * Попадем на стартовую страницу и сразу переходим на вклдаку [Private Access Config](https://developer.qingping.co/privatisation/config)
 
