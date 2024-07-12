@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: home
 title: "dentra.github.io"
 permalink: /index.html
 ---
