@@ -34,7 +34,7 @@ English version of this page is easily available via [google translate](https://
 > Обратите внимание на присутсвующий сенсор батареи на последней версии прошивки (на 2023-11-03) 
 > и абсольюно новый, более нигде не доступный, сенсор частиц `PM10`.
 
-<img src="cgs1.png" alt="Qingping Air Monitor (CGS1)" width="600"/>
+<img src="/images/cgs1.png" alt="Qingping Air Monitor (CGS1)" width="600"/>
 
 
 ## Добавление устройсва в аккаунт "Qingping IoT"
