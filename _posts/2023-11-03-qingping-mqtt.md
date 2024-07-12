@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Локальный MQTT-доступ для устройств Qingping"
+title: "Локальный MQTT-доступ для устройств Qingping на примере Air Monitor (CGS1/cgllc.airmonitor.s1)"
 date: 2023-11-03 20:26:00 +0300
 categories: homeassistant qingping mqtt
 ---
@@ -88,7 +88,7 @@ English version of this page is easily available via [google translate](https://
   - 17: исторические данные 
 * Нас интерсуют данные 12 типа, вот их пример:
 
-```json
+```jsonc
 {
     // mac-адрес устройства
     "mac": "582D3400BD48",
@@ -190,7 +190,7 @@ mqtt:
       unit_of_measurement: "ppm"
       value_template: >-
         {{ value_json.sensorData.0.co2.value 
-          if value_json.type == "12" and value_json.sensorData.0.temperature.status == 0 }}
+          if value_json.type == "12" and value_json.sensorData.0.co2.status == 0 }}
 
     - unique_id: bedroom_air_monitor_temperature
       object_id: bedroom_air_monitor_temperature
@@ -258,7 +258,7 @@ mqtt:
       unit_of_measurement: "µg/m³"
       value_template: >-
         {{ value_json.sensorData.0.pm10.value 
-          if value_json.type == "12" and value_json.sensorData.0.pm25.status == 0 }}
+          if value_json.type == "12" and value_json.sensorData.0.pm10.status == 0 }}
 
     - unique_id: bedroom_air_monitor_battery
       object_id: bedroom_air_monitor_battery
